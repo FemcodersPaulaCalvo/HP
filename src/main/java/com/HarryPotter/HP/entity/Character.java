@@ -1,4 +1,4 @@
-package com.HarryPotter.HP;
+package com.HarryPotter.HP.entity;
 
 public class Character {
     protected String name;

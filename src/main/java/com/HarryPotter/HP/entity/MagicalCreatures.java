@@ -1,6 +1,6 @@
-package com.HarryPotter.HP;
+package com.HarryPotter.HP.entity;
 
-public class MagicalCreatures extends Character{
+public class MagicalCreatures extends Character {
     protected enum classification {
         Boring, Harmless, Competent, Dangerous, Murderous
     }
