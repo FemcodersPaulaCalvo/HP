@@ -1,5 +1,7 @@
 package com.HarryPotter.HP.entity;
 
+import java.util.Arrays;
+
 public class Wizard extends Character {
 
     protected String houseHogwarts;
@@ -61,5 +63,21 @@ public class Wizard extends Character {
 
     public void setMagicLevel(level magicLevel) {
         this.magicLevel = magicLevel;
+    }
+
+    @Override
+    public String toString() {
+        return "Wizard{" +
+                "houseHogwarts='" + houseHogwarts + '\'' +
+                ", courseHogwarts=" + courseHogwarts +
+                ", bloodLineage=" + bloodLineage +
+                ", wandCore='" + wandCore + '\'' +
+                ", spells=" + Arrays.toString(spells) +
+                ", magicLevel=" + magicLevel +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", alive=" + alive +
+                '}';
     }
 }
