@@ -5,8 +5,8 @@ public class Muggle extends Character {
     protected String work;
     protected Boolean haveSons;
 
-    public Muggle(String name, byte age, boolean alive, String work, Boolean haveSons) {
-        super(name, age, alive);
+    public Muggle(String name, String surname, byte age, boolean alive, String work, Boolean haveSons) {
+        super(name, surname, age, alive);
         this.work = work;
         this.haveSons = haveSons;
     }
