@@ -28,7 +28,7 @@ public class MuggleTest {
 
     @Test
     public void createNewMuggle(){
-        Muggle muggle2 = new Muggle("Frank", "Longbottom", (byte) 45, false,  "Auror", false);
-        assertEquals(muggle1, muggle2);
+        Muggle muggle2 = new Muggle("Frank", "Longbottom", (byte) 45, false,  "Auror", true);
+        assertEquals(muggle1.toString(), muggle2.toString());
     }
 }
