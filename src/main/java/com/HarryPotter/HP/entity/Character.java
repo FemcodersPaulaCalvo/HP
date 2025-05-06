@@ -44,4 +44,14 @@ public class Character {
     public void setAlive(boolean alive) {
         this.alive = alive;
     }
+
+    @Override
+    public String toString() {
+        return "Character{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", alive=" + alive +
+                '}';
+    }
 }
