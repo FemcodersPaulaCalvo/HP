@@ -1,9 +1,9 @@
 package com.HarryPotter.HP;
 
 public class Character {
-    String name;
-    byte age;
-    boolean alive;
+    protected String name;
+    protected byte age;
+    protected boolean alive;
 
     public Character(String name, byte age, boolean alive) {
         this.name = name;
