@@ -26,4 +26,16 @@ public class Muggle extends Character {
     public void setHaveSons(Boolean haveSons) {
         this.haveSons = haveSons;
     }
+
+    @Override
+    public String toString() {
+        return "Muggle{" +
+                "work='" + work + '\'' +
+                ", haveSons=" + haveSons +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", alive=" + alive +
+                '}';
+    }
 }
