@@ -1,7 +1,10 @@
 package com.HarryPotter.HP.entity;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.ArrayList;
 
 import static com.HarryPotter.HP.entity.Wizard.lineage.*;
 import static com.HarryPotter.HP.entity.Wizard.level.*;
@@ -10,11 +13,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class WizzardTest {
 
-    Wizard wizard1 = new Wizard("Harry", "Potter", (byte) 11, true, "Griffindor", (byte) 1, Pureblood, "phoenix feather", new String[]{
-            "Wingardium Leviosa",
-            "Lumos",
-            "Alohomora"
-    }, Novice);
+    Wizard wizard1;
+    Wizard wizard2;
+
+    @BeforeEach
+    void setUp() {
+        ArrayList<String> spells = new ArrayList<>();
+        spells.add("Wingardium Leviosa");
+        spells.add("Lumos");
+        spells.add("Alohomora");
+
+        wizard1 = new Wizard("Harry", "Potter", (byte) 11, true, "Griffindor", (byte) 1, Pureblood, "phoenix feather", spells, Novice);
+        wizard2 = new Wizard("Harry", "Potter", (byte) 11, true, "Griffindor", (byte) 1, Pureblood, "phoenix feather", spells, Novice);
+    }
 
     @Test
     public void nameNewWizard() {
@@ -34,13 +45,7 @@ public class WizzardTest {
 
     @Test
     public void createNewWizzard(){
-        Wizard wizard2 = new Wizard("Harry", "Potter", (byte) 11, true, "Griffindor", (byte) 1, Pureblood, "phoenix feather", new String[]{
-                "Wingardium Leviosa",
-                "Lumos",
-                "Alohomora"
-        }, Novice);
-
-        assertEquals(wizard1.toString(), wizard2.toString());
+                assertEquals(wizard1.toString(), wizard2.toString());
     }
 
 }
