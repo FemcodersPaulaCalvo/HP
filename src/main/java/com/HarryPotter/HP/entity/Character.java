@@ -45,6 +45,21 @@ public class Character {
         this.alive = alive;
     }
 
+    public void increaseAge(Character character){
+        character.setAge((byte)(character.getAge() + 1));
+        System.out.println("Happy birthday!!");
+    }
+
+    public void isNotAlive(Character character){
+        character.setAlive(false);
+        System.out.println("I feel your loss");
+    }
+
+    public void isAliveNow(Character character){
+        character.setAlive(true);
+        System.out.println("It's alive");
+    }
+
     @Override
     public String toString() {
         return "Character{" +
