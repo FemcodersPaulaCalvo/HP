@@ -1,6 +1,6 @@
 package com.HarryPotter.HP.entity;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Wizard extends Character {
 
@@ -12,13 +12,13 @@ public class Wizard extends Character {
 
     protected lineage bloodLineage ;
     protected String wandCore;
-    protected String[] spells;
+    protected ArrayList<String> spells;
     protected enum level {
         Novice, Intermediate, Advanced, Powerful
     }
     protected level magicLevel;
 
-    public Wizard(String name, String surname, byte age, boolean alive, String houseHogwarts, byte courseHogwarts, lineage bloodLineage, String wandCore, String[] spells, level magicLevel) {
+    public Wizard(String name, String surname, byte age, boolean alive, String houseHogwarts, byte courseHogwarts, lineage bloodLineage, String wandCore, ArrayList<String> spells, level magicLevel) {
         super(name, surname, age, alive);
         this.houseHogwarts = houseHogwarts;
         this.courseHogwarts = courseHogwarts;
@@ -49,11 +49,11 @@ public class Wizard extends Character {
         return wandCore;
     }
 
-    public String[] getSpells() {
+    public ArrayList<String> getSpells() {
         return spells;
     }
 
-    public void setSpells(String[] spells) {
+    public void setSpells(ArrayList<String> spells) {
         this.spells = spells;
     }
 
@@ -65,6 +65,33 @@ public class Wizard extends Character {
         this.magicLevel = magicLevel;
     }
 
+    public void listAllSpells(){
+        ArrayList<String> listSpells = this.spells;
+        System.out.println("Spells list");
+        for(String spell : listSpells){
+            System.out.println("· " + spell);
+        }
+    }
+
+    public void addSpell(String newSpell){
+        ArrayList<String> listSpells = this.getSpells();
+        boolean alreadyExists = listSpells.contains(newSpell.toLowerCase());
+        if(!alreadyExists){
+            listSpells.add(newSpell.toLowerCase());} else {
+            System.out.println("This spell is already added");
+        }
+    }
+
+    public void removeSpell(String spell){
+        ArrayList<String> listSpells = this.getSpells();
+        boolean alreadyExists = listSpells.contains(spell.toLowerCase());
+        if(alreadyExists){
+            listSpells.remove(listSpells.indexOf(spell.toLowerCase()));} else {
+            System.out.println("This spell does not exist");
+        }
+    }
+
+
     @Override
     public String toString() {
         return "Wizard{" +
@@ -72,7 +99,7 @@ public class Wizard extends Character {
                 ", courseHogwarts=" + courseHogwarts +
                 ", bloodLineage=" + bloodLineage +
                 ", wandCore='" + wandCore + '\'' +
-                ", spells=" + Arrays.toString(spells) +
+                ", spells=" + spells.toString() +
                 ", magicLevel=" + magicLevel +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
