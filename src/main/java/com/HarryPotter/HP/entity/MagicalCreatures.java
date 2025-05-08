@@ -1,5 +1,7 @@
 package com.HarryPotter.HP.entity;
 
+import java.util.Arrays;
+
 public class MagicalCreatures extends Character {
     protected enum classification {
         Boring, Harmless, Competent, Dangerous, Murderous
@@ -70,5 +72,21 @@ public class MagicalCreatures extends Character {
 
     public void setCreatureDescription(String creatureDescription) {
         this.creatureDescription = creatureDescription;
+    }
+
+    @Override
+    public String toString() {
+        return "MagicalCreatures{" +
+                "classificationMinistry=" + classificationMinistry +
+                ", hasMagicalAbilities=" + hasMagicalAbilities +
+                ", specificSkills=" + Arrays.toString(specificSkills) +
+                ", dietType=" + dietType +
+                ", isRare=" + isRare +
+                ", creatureDescription='" + creatureDescription + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", alive=" + alive +
+                '}';
     }
 }
