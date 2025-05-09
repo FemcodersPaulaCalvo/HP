@@ -6,14 +6,14 @@ public class Wizard extends Character {
 
     protected String houseHogwarts;
     protected byte courseHogwarts;
-    protected enum lineage {
+    public enum lineage {
         Pureblood, HalfBlood, MuggleBorn
     }
 
     protected lineage bloodLineage ;
     protected String wandCore;
     protected ArrayList<String> spells;
-    protected enum level {
+    public enum level {
         Novice, Intermediate, Advanced, Powerful
     }
     protected level magicLevel;

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MagicalCreatures extends Character {
-    protected enum classification {
+    public enum classification {
         Boring, Harmless, Competent, Dangerous, Murderous
     }
     protected classification classificationMinistry;
     protected boolean hasMagicalAbilities;
     protected ArrayList<String> specificSkills;
-    protected enum diet {
+    public enum diet {
         Herbivore, Omnivore, Carnivore, Cannibal
     }
     protected diet dietType;
